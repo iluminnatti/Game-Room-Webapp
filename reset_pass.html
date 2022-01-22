@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Túlio Barbosa Abreu">
+    <meta name="description" content="Game Room  - World's No. 1 game store">
+    <meta name="keywords" content="Gamestore, Games, Online Sales, Technology, Dev">
+    <title>Game Room - Esqueci minha senha</title>
+    <link rel="shortcut icon" href="IMAGES/gamepad-solid.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      #main-box{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 0 1rem rgb(237, 237, 237);
+        margin-top: 10%;
+      }
+      #main-box img{
+        width: 20%;
+      }
+      #form{
+        margin-top: 1rem;
+        text-align: left;
+      }
+      #form_btn{
+        margin-top: 1rem;
+        text-align: right;
+      }
+      input{
+        display: block;
+        width: 100%;
+        background-color: #ececec;
+        height: 2rem;
+        border-radius: .2rem;
+        border: none;
+        padding-left: 1rem;
+      }
+      label{
+        color: rgb(72, 162, 208);
+        font-weight: bold;
+      }
+      #confirm_btn{
+        background-color: rgb(72, 162, 208);
+        color: white;
+        font-weight: bold;
+        border-radius: .2rem;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+
+      }
+      @media only screen and (max-width: 680px){
+        #main-box{
+          width: 100%;
+          margin-top: 20%;
+        }
+        #main-box img{
+          width: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main-box">
+      <img src="IMAGES/reset.svg">
+      <p id="form"><label for="email_for_reset">Email</label><input type="email" name="email_for_reset" id="email_for_reset"></p>
+      <p id="form_btn"><button id="confirm_btn" onclick="send_resetpass_email()">Confirmar</button></p>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <script type="text/javascript" src="JS/reset_pass.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Túlio Barbosa Abreu">
+    <meta name="description" content="Game Room  - World's No. 1 game store">
+    <meta name="keywords" content="Gamestore, Games, Online Sales, Technology, Dev">
+    <title>Game Room - My Cart</title>
+    <link rel="shortcut icon" href="IMAGES/gamepad-solid.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="GLIDER/Glider.js-master/glider.css">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/cart.css">
+  </head>
+  <body onload="greet()" onresize="reset()">
+    <header id="container-menu">
+      <div id="main-menu">
+        <div id="menu_btn"><label class="fas fa-bars" for="check" onclick="checado()"></label><input type="button" id="check"></div>
+        <a href="cart.html" id="cart_btn" class="fas fa-shopping-cart"></a>
+        <section id="logo"><a href="index.html"><i class="fas fa-gamepad"></i> Game Room</a></section>
+        <section id="menu-selector">
+          <div id="menu-box">
+            <label class="fas fa-times" for="cancel" onclick="checado()" id="cancel_btn"></label><input type="button" id="cancel">
+            <section id="greet">
+              <i class="fas fa-user-circle"></i> <span id="hi"></span>
+            </section>
+            <section id="scroll_area">
+            <a href="index.html" id="m_link"><i class="fas fa-home" id="icone"></i> Home</a>
+            <a href="#" id="m_link"><i class="fas fa-bolt" id="icone"></i> Novos</a>
+            <a href="#" id="m_link"><i class="fas fa-fire" id="icone"></i> Destaques</a>
+            <a href="#" id="m_link"><i class="fas fa-info-circle" id="icone"></i> Ajuda</a>
+            <p id="bar"></p>
+
+            <section id="additional">
+              <a href="#"><i class="fas fa-search"></i>  Pesquisar</a>
+              <a href="#"><i class="fas fa-star"></i>  Favoritos</a>
+              <a href="cart.html"><i class="fas fa-shopping-cart"></i>  Carrinho</a>
+              <a href="signin.html"><i class="fas fa-user"></i>  Perfil</a>
+            </section>
+          </section>
+            <p id="bar2"></p>
+
+            <section id="signinup">
+              <a href="signin.html" style="width: 50%; margin-left: auto; margin-right: auto; padding: 0px;"><input type="button" value="Sign In" id="b1"></a>
+              <a href="signup.html" style="width: 50%; margin-left: auto; margin-right: auto; padding: 0px;"><input type="button" value="Sign Up" id="b2"></a>
+            </section>
+          </div>
+          <div id="icons">
+            <div><a href="#"><i class="fas fa-search"></i></a></div>
+            <div><a href="#"><i class="fas fa-star"></i></a></div>
+            <div><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></div>
+            <div><a href="signin.html"><i class="fas fa-user"></i></a></div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <nav id="only-mobile">
+      <a href="index.html"><i class="fas fa-home" id="icone"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-star"></i></a>
+      <a href="#"><i class="fas fa-bolt" id="icone"></i></a>
+      <a href="signin.html"><i class="fas fa-user"></i></a>
+    </nav>
+
+    <div id="search_bar">
+      <a class="fas fa-chevron-left" href="index.html"></a>
+      <input type="search" class="search_bar" placeholder="Search">
+      <label class="fas fa-search" for="sub_btn"></label><input type="submit" id="sub_btn" style="display: none;">
+    </div>
+
+    <section class="top_glider">
+      <div id="top_item"><img src="https://cdn-icons-png.flaticon.com/512/1216/1216995.png"><span>Pesquise games pelo seu gênero</span></div>
+      <div id="top_item"><img src="https://cdn1.iconfinder.com/data/icons/game-design-butterscotch-vol-1/256/Crossing_Swords-512.png"><span>Ação</span></div>
+      <div id="top_item"><img src="https://cdn-icons-png.flaticon.com/512/2619/2619285.png"><span>RPG</span></div>
+      <div id="top_item"><img src="https://cdn.iconscout.com/icon/free/png-256/horror-1576179-1334444.png"><span>Horror</span></div>
+      <div id="top_item"><img src="https://cdn-icons-png.flaticon.com/512/2790/2790402.png"><span>Aventura</span></div>
+      <div id="top_item"><img src="https://cdn-icons-png.flaticon.com/512/4330/4330504.png"><span>Online</span></div>
+      <div id="top_item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzB23mn7cDnZoRW9XusmzvXS9wjfzcBD6Obl_Moj4hcObeIx-7KBls0z41H4-1n_D1MIE&usqp=CAU"><span>Shooter</span></div>
+    </section>
+
+    <main id="container-cart">
+
+    </main>
+
+    <footer>
+      <div id="f_top">
+        <a href="#container-menu" class="back"><i class="fas fa-caret-up"></i></a>
+        <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> Game Room</a>
+      </div>
+      <div id="f_bottom">
+        <p style="color: #A9A9A9;">GameRoom Serviços de Gaming do Brasil Ltda. | CNPJ 23.756.017/1934-82</p>
+        <p style="color: #A9A9A9;">Av. Getúlio Vargas, 2077, Torre K, 25° andar - Belo Horizonte CEP: 82647-017</p>
+        <p style="color: #A9A9A9;">Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express) e boleto.</p>
+        <p style="font-style: italic;">© Copyright GameRoom <i id="year">ano</i> - Todos os direitos reservados</p>
+        <div id="social_medias">
+          <a href="https://www.facebook.com/people/Marcos-Tulio-Barbosa-Abreu/100009871149666/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png"></a>
+          <a href="https://www.instagram.com/mtulio_abreu/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></a>
+          <a href="https://github.com/iluminnatti" target="_blank"><img src="https://rajlab.org/icons/github_white.png"></a>
+          <p>
+            <ul style="font-family: monospace;">
+              <li><i class="far fa-envelope"></i> marcostulio_barbosaabreu@yahoo.com</li>
+              <li><i class="far fa-envelope"></i> marcostuliobarbosaabreu112@gmail.com</li>
+              <li><i class="far fa-envelope"></i> mtba1@aluno.ifnmg.edu.br</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="GLIDER/Glider.js-master/glider.js"></script>
+
+    <script tpe="text/javascript" src="JS/cart.js"></script>
+
+    <script tpe="text/javascript" src="JS/menu.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Túlio Barbosa Abreu">
+    <meta name="description" content="Game Room  - World's No. 1 game store">
+    <meta name="keywords" content="Gamestore, Games, Online Sales, Technology, Dev">
+    <title>Game Room - Game Store No. 1 do mundo!</title>
+    <link rel="shortcut icon" href="IMAGES/gamepad-solid.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="GLIDER/Glider.js-master/glider.css">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  </head>
+  <body onload="greet()" onresize="reset()">
+    <header id="container-menu">
+      <div id="main-menu">
+        <div id="menu_btn"><label class="fas fa-bars" for="check" onclick="checado()"></label><input type="button" id="check"></div>
+        <a href="cart.html" id="cart_btn" class="fas fa-shopping-cart"></a>
+        <section id="logo"><a href="index.html"><i class="fas fa-gamepad"></i> Game Room</a></section>
+        <section id="menu-selector">
+          <div id="menu-box">
+            <label class="fas fa-times" for="cancel" onclick="checado()" id="cancel_btn"></label><input type="button" id="cancel">
+            <section id="greet">
+              <i class="fas fa-user-circle"></i> <span id="hi"></span>
+            </section>
+            <section id="scroll_area">
+            <a href="index.html" id="m_link"><i class="fas fa-home" id="icone"></i> Home</a>
+            <a href="#" id="m_link"><i class="fas fa-bolt" id="icone"></i> Novos</a>
+            <a href="#" id="m_link"><i class="fas fa-fire" id="icone"></i> Destaques</a>
+            <a href="#" id="m_link"><i class="fas fa-info-circle" id="icone"></i> Ajuda</a>
+            <p id="bar"></p>
+
+            <section id="additional">
+              <a href="#"><i class="fas fa-search"></i>  Pesquisar</a>
+              <a href="#"><i class="fas fa-star"></i>  Favoritos</a>
+              <a href="cart.html"><i class="fas fa-shopping-cart"></i>  Carrinho</a>
+              <a href="signin.html" class="login_icon"><i class="fas fa-user"></i>  Perfil</a>
+            </section>
+          </section>
+            <p id="bar2"></p>
+
+            <section id="signinup">
+              <a href="signin.html" style="width: 50%; margin-left: auto; margin-right: auto; padding: 0px;"><input type="button" value="Sign In" id="b1"></a>
+              <a href="signup.html" style="width: 50%; margin-left: auto; margin-right: auto; padding: 0px;"><input type="button" value="Sign Up" id="b2"></a>
+            </section>
+          </div>
+          <div id="icons">
+            <div><a href="#"><i class="fas fa-search"></i></a></div>
+            <div><a href="#"><i class="fas fa-star"></i></a></div>
+            <div><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></div>
+            <div class="login_icon"><a href="signin.html"><i class="fas fa-user"></i></a></div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <nav id="only-mobile">
+      <a href="index.html"><i class="fas fa-home" id="icone"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-star"></i></a>
+      <a href="#"><i class="fas fa-bolt" id="icone"></i></a>
+      <a href="signin.html"><i class="fas fa-user"></i></a>
+    </nav>
+
+    <div id="profile_menu">
+      <a href="user.html">
+        <div id="profile_pic"></div>
+        <div id="prof_text"></div>
+      </a>
+      <button id="logout_btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
+    </div>
+
+    <section id="container-body">
+      <input type="checkbox" id="dark_theme_check" style="display: none;" onchange="dark_theme()">
+      <label id="dark_theme" for="dark_theme_check">
+        <i class="fas fa-moon"></i>
+        <div class="ball"></div>
+        <i class="fas fa-sun"></i>
+      </label>
+      <div id="novidades">
+        <h1>Novidades</h1>
+        <div id="nov_slider" class="glider">
+        </div>
+      </div>
+      <div id="destaques">
+        <h1>Destaques</h1>
+        <div id="dest_slider" class="glider_secondary">
+        </div>
+      </div>
+      <div id="lista">
+        <div id="list_item"><i class="fas fa-burn"></i>Ação</div>
+        <div id="list_item"><i class="fas fa-dice-d20"></i>RPG</div>
+        <div id="list_item"><i class="fas fa-fist-raised"></i>Luta</div>
+        <div id="list_item"><i class="fas fa-bomb"></i>Shooter</div>
+        <div id="list_item"><i class="fas fa-dragon"></i>Fantasia</div>
+        <div id="list_item"><i class="fas fa-fighter-jet"></i>8bits game</div>
+        <div id="list_item"><i class="fas fa-ghost"></i>Horror</div>
+        <div id="list_item"><i class="fas fa-globe-americas"></i>Mundo Aberto</div>
+        <div id="list_item"><i class="fas fa-map-signs"></i>Aventura</div>
+        <div id="list_item"><i class="far fa-futbol"></i>Esportes</div>
+        <div id="list_item"><i class="fas fa-skull"></i>Sobrevivência</div>
+        <div id="list_item"><i class="fas fa-headset"></i>Online</div>
+      </div>
+    </section>
+    <div id="oferta" class="offer">
+      <div id="item_oferta1">
+        <img src="https://manualdosgames.com/wp-content/uploads/2021/08/Elden_Ring.jpg">
+        <div id="oferta_description">
+          <div id="oferta_invisible">
+            <p>Explore um novo mundo de fantasia criado por Hidetaka Miyazaki e George R.R. Martin.</p>
+          </div>
+        </div>
+      </div>
+      <div id="item_oferta2">
+        <img src="https://gamehall.com.br/wp-content/uploads/2020/10/spider-man-miles-morales-1.jpg">
+        <div id="oferta_description">
+          <div id="oferta_invisible">
+            <p>Para salvar toda a Nova Iorque da Marvel, Miles deve assumir o manto do Homem-Aranha e torná-lo seu.</p>
+          </div>
+        </div>
+      </div>
+      <div id="item_oferta3">
+        <img src="https://www.ultimaficha.com.br/wp-content/uploads/2020/03/sea-of-stars-keyart.jpg">
+        <div id="oferta_description">
+          <div id="oferta_invisible">
+            <p>Sea of Stars é um RPG de combate por turno que presta homenagem a outro clássico do gênero: nada menos do que Chrono Trigger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="f_top">
+        <a href="#container-menu" class="back"><i class="fas fa-caret-up"></i></a>
+        <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> Game Room</a>
+      </div>
+      <div id="f_bottom">
+        <p style="color: #A9A9A9;">GameRoom Serviços de Gaming do Brasil Ltda. | CNPJ 23.756.017/1934-82</p>
+        <p style="color: #A9A9A9;">Av. Getúlio Vargas, 2077, Torre K, 25° andar - Belo Horizonte CEP: 82647-017</p>
+        <p style="color: #A9A9A9;">Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express) e boleto.</p>
+        <p style="font-style: italic;">© Copyright GameRoom <i id="year">ano</i> - Todos os direitos reservados</p>
+        <div id="social_medias">
+          <a href="https://www.facebook.com/people/Marcos-Tulio-Barbosa-Abreu/100009871149666/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png"></a>
+          <a href="https://www.instagram.com/mtulio_abreu/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></a>
+          <a href="https://github.com/iluminnatti" target="_blank"><img src="https://rajlab.org/icons/github_white.png"></a>
+          <p>
+            <ul style="font-family: monospace;">
+              <li><i class="far fa-envelope"></i> marcostulio_barbosaabreu@yahoo.com</li>
+              <li><i class="far fa-envelope"></i> marcostuliobarbosaabreu112@gmail.com</li>
+              <li><i class="far fa-envelope"></i> mtba1@aluno.ifnmg.edu.br</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="GLIDER/Glider.js-master/glider.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script type="text/javascript" src="JS/menu.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+
+    <!-- <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
+      import { auth } from 'https://www.gstatic.com/firebasejs/9.6.3/firebase-auth.js';
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBHdNR7I1ikWJALD99PpFjjGwRinZ96OLU",
+        authDomain: "game-room-dca9f.firebaseapp.com",
+        projectId: "game-room-dca9f",
+        storageBucket: "game-room-dca9f.appspot.com",
+        messagingSenderId: "25450111935",
+        appId: "1:25450111935:web:5350ab9a04d21ca0dbf70a"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script> -->
+
+  </body>
+</html>

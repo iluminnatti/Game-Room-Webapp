@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Túlio Barbosa Abreu">
+    <meta name="description" content="Game Room  - World's No. 1 game store">
+    <meta name="keywords" content="Gamestore, Games, Online Sales, Technology, Dev">
+    <title>Game Room - Sign Up</title>
+    <link rel="shortcut icon" href="IMAGES/gamepad-solid.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/signinup.css">
+  </head>
+  <body onload="bota_data()">
+    <a href="index.html" class="sign-logotop"><i class="fas fa-gamepad"></i> Game Room</a>
+    <main id="signup_section">
+      <h2>Cadastrar-se</h2>
+      <input type="text" id="signup_name" name="signup_name" placeholder="Nome *" required class="form_init">
+      <input type="email" id="signup_email" name="signup_email" placeholder="E-mail *">
+      <p class="pass"><input type="password" id="signup_pass" name="signup_pass" placeholder="Senha *"><button class="show2" onclick="show_pass()"><i class="fas fa-eye-slash" id="icon1"></i></button></p>
+      <p class="pass"><input type="password" id="pass_confirmation" name="pass_confirmation" placeholder="Confirme a senha *"><button class="show2" onclick="show_pass2()"><i class="fas fa-eye-slash" id="icon2"></i></button></p>
+      <input type="text" id="signup_cpf" name="signup_cpf" placeholder="CPF *">
+      <input type="url" id="prof_pic" name="prof_pic" placeholder="Imagem de perfil (link) *">
+      <button id="signup_btn" onclick="signup()" type="submit"><i class="fas fa-file-alt"></i> Cadastrar</button>
+    </main>
+    <section id="message">
+      <h1>Usuário já está logado. Acesse a página inicial clicando <a href="index.html">Aqui.</a></h1>
+    </section>
+    <hr class="bottom_bar" />
+    <footer id="footer_login">
+      <p>Já possui uma conta? Faça Login <a href="signin.html">aqui.</a></p>
+      <p style="font-style: italic;">© Copyright GameRoom <i id="year">ano</i> - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script type="text/javascript" src="JS/signup.js"></script>
+
+  </body>
+</html>

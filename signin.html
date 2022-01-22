@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Túlio Barbosa Abreu">
+    <meta name="description" content="Game Room  - World's No. 1 game store">
+    <meta name="keywords" content="Gamestore, Games, Online Sales, Technology, Dev">
+    <title>Game Room - Login</title>
+    <link rel="shortcut icon" href="IMAGES/gamepad-solid.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/signinup.css">
+  </head>
+  <body onload="bota_data()">
+    <a href="index.html" class="sign-logotop"><i class="fas fa-gamepad"></i> Game Room</a>
+    <h2 id="login_message">Usuário já está logado. Retorne para a página inicial <a href="index.html">aqui</a> ou saia da conta pressionando o botão abaixo</h2>
+    <button id="logout_btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
+    <main id="login_section">
+      <h2>Fazer login</h2>
+      <input type="email" id="login_email" name="login_email" placeholder="E-mail usado para cadastrar-se *">
+      <p class="pass"><input type="password" id="login_pass" name="login_pass" placeholder="Senha *"><button class="show" onclick="show_pass()"><i class="fas fa-eye-slash" id="icon"></i></button></p>
+      <button id="signin_btn" onclick="login()"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+      <p class="forgot_pass"><a href="reset_pass.html" onclick="send_resetpass_email()">esqueci minha senha</a></p>
+    </main>
+    <hr class="bottom_bar" />
+    <footer id="footer_login">
+      <p>Ainda não possui uma conta? Cadastre-se <a href="signup.html">aqui.</a></p>
+      <p style="font-style: italic;">© Copyright GameRoom <i id="year">ano</i> - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+      function bota_data(){
+        let r = document.getElementById("year")
+        let now = new Date()
+        let this_year = now.getFullYear()
+        r.innerHTML = `${this_year}`
+      }
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <script type="text/javascript" src="JS/login.js"></script>
+  </body>
+</html>

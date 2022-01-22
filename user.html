@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Túlio Barbosa Abreu">
+    <meta name="description" content="Game Room  - World's No. 1 game store">
+    <meta name="keywords" content="Gamestore, Games, Online Sales, Technology, Dev">
+    <title>Game Room - Perfil</title>
+    <link rel="shortcut icon" href="IMAGES/gamepad-solid.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="GLIDER/Glider.js-master/glider.css"><!-- Talvez não seja necessário aqui -->
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/user.css">
+  </head>
+  <body onload="greet()" onresize="resetar()">
+    <header id="container-menu">
+      <div id="main-menu">
+        <div id="menu_btn"><label class="fas fa-bars" for="check" onclick="checked()"></label><input type="button" id="check"></div>
+        <a href="cart.html" id="cart_btn" class="fas fa-shopping-cart"></a>
+        <section id="logo"><a href="index.html"><i class="fas fa-gamepad"></i> Game Room</a></section>
+        <section id="menu-selector">
+          <div id="menu-box">
+            <label class="fas fa-times" for="cancel" onclick="checado()" id="cancel_btn"></label><input type="button" id="cancel">
+            <section id="greet">
+              <i class="fas fa-user-circle"></i> <span id="hi"></span>
+            </section>
+            <section id="scroll_area">
+            <a href="index.html" id="m_link"><i class="fas fa-home" id="icone"></i> Home</a>
+            <a href="#" id="m_link"><i class="fas fa-bolt" id="icone"></i> Novos</a>
+            <a href="#" id="m_link"><i class="fas fa-fire" id="icone"></i> Destaques</a>
+            <a href="#" id="m_link"><i class="fas fa-info-circle" id="icone"></i> Ajuda</a>
+            <p id="bar"></p>
+
+            <section id="additional">
+              <a href="#"><i class="fas fa-search"></i>  Pesquisar</a>
+              <a href="#"><i class="fas fa-star"></i>  Favoritos</a>
+              <a href="cart.html"><i class="fas fa-shopping-cart"></i>  Carrinho</a>
+              <a href="signin.html" class="login_icon"><i class="fas fa-user"></i>  Perfil</a>
+            </section>
+          </section>
+            <p id="bar2"></p>
+
+            <section id="signinup">
+              <a href="signin.html" style="width: 50%; margin-left: auto; margin-right: auto; padding: 0px;"><input type="button" value="Sign In" id="b1"></a>
+              <a href="signup.html" style="width: 50%; margin-left: auto; margin-right: auto; padding: 0px;"><input type="button" value="Sign Up" id="b2"></a>
+            </section>
+          </div>
+          <div id="icons">
+            <div><a href="#"><i class="fas fa-search"></i></a></div>
+            <div><a href="#"><i class="fas fa-star"></i></a></div>
+            <div><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></div>
+            <div class="login_icon"><a href="signin.html"><i class="fas fa-user"></i></a></div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <nav id="only-mobile">
+      <a href="index.html"><i class="fas fa-home" id="icone"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-star"></i></a>
+      <a href="#"><i class="fas fa-bolt" id="icone"></i></a>
+      <a href="signin.html"><i class="fas fa-user"></i></a>
+    </nav>
+
+    <section id="user_top">
+      <main id="main_user_top">
+        <div id="img_user_top"></div>
+        <p id="name_user_top">NAME</p>
+        <button id="logout_top" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
+        <button id="change" onclick="popup()"><i class="fas fa-exchange-alt"></i> Editar Conta</button>
+      </main>
+    </section>
+
+    <section id="update_account_section">
+      <button class="fas fa-times" onclick="fechar()" id="close_btn"></button>
+      <input type="text" id="new_name" name="new_name" placeholder="Novo nome *" required>
+      <p class="pass"><input type="password" id="old_pass" name="old_pass" placeholder="Digite a senha atual *"><button class="show2" onclick="show_pass()"><i class="fas fa-eye-slash" id="icon1"></i></button></p>
+      <p class="pass"><input type="password" id="new_pass" name="new_pass" placeholder="Nova senha *"><button class="show2" onclick="show_pass2()"><i class="fas fa-eye-slash" id="icon2"></i></button></p>
+      <input type="text" id="new_cpf" name="new_cpf" placeholder="Novo CPF *">
+      <input type="url" id="new_prof_pic" name="new_prof_pic" placeholder="Nova imagem de perfil (link) *">
+      <span class="pic_alert">Dê preferência para imagens quadradas (largura ≅ altura)</span>
+      <h3 style="text-transform: none; color: red; margin-top: 1rem;">Não é possível mudar o email</h3>
+      <button id="update_btn" onclick="update()" type="submit"><i class="fas fa-upload"></i> Atualizar</button>
+    </section>
+
+    <section id="middle_bar">
+      <div id="fav_qtd">0</div>
+      <div id="days_here"><h3>Dias Aqui</h3>0 dia(s)</div>
+      <div id="last_login"><h3>ùltimo Login</h3>17:38 29/04/1945</div>
+    </section>
+
+    <footer>
+      <div id="f_top">
+        <a href="#container-menu" class="back"><i class="fas fa-caret-up"></i></a>
+        <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> Game Room</a>
+      </div>
+      <div id="f_bottom">
+        <p style="color: #A9A9A9;">GameRoom Serviços de Gaming do Brasil Ltda. | CNPJ 23.756.017/1934-82</p>
+        <p style="color: #A9A9A9;">Av. Getúlio Vargas, 2077, Torre K, 25° andar - Belo Horizonte CEP: 82647-017</p>
+        <p style="color: #A9A9A9;">Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express) e boleto.</p>
+        <p style="font-style: italic;">© Copyright GameRoom <i id="year">ano</i> - Todos os direitos reservados</p>
+        <div id="social_medias">
+          <a href="https://www.facebook.com/people/Marcos-Tulio-Barbosa-Abreu/100009871149666/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png"></a>
+          <a href="https://www.instagram.com/mtulio_abreu/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></a>
+          <a href="https://github.com/iluminnatti" target="_blank"><img src="https://rajlab.org/icons/github_white.png"></a>
+          <p>
+            <ul style="font-family: monospace;">
+              <li><i class="far fa-envelope"></i> marcostulio_barbosaabreu@yahoo.com</li>
+              <li><i class="far fa-envelope"></i> marcostuliobarbosaabreu112@gmail.com</li>
+              <li><i class="far fa-envelope"></i> mtba1@aluno.ifnmg.edu.br</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="GLIDER/Glider.js-master/glider.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script type="text/javascript" src="JS/menu.js"></script>
+
+    <script type="text/javascript" src="JS/user.js"></script>
+  </body>
+</html>
