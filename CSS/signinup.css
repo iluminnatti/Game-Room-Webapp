@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Neon Club';
+  src: url('../FONTS/NEON CLUB MUSIC/NEON CLUB MUSIC.otf') format('truetype');
+}
+.sign-logotop{
+  font-family: "Neon Club";
+  color: #242C3C;
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  text-shadow: .06rem .06rem 1px #95327f;
+  margin-top: 2rem;
+}
+.sign-logotop i{
+  color: #5e79a1;
+}
+#login_section, #signup_section{
+  margin-top: 2rem;
+  border: .1rem solid gray;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  text-align: center;
+  border-radius: .2rem;
+}
+input{
+  display: block;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: none;
+}
+.pass{
+  border: .1rem solid gray;
+  border-radius: .2rem;
+  margin-bottom: 1rem;
+}
+.pass:hover{
+  border: .1rem solid black;
+  transition: all .1s linear;
+}
+#login_pass, #signup_pass, #pass_confirmation{
+  width: 90%;
+  float: left;
+  border: none;
+  height: 1.9rem;
+}
+#signin_btn, #signup_btn{
+  width: 100%;
+  height: 2rem;
+  display: block;
+  margin-top: 0;
+  color: white;
+  background-color: #003F5D;
+  border: none;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+#signin_btn:hover, #signup_btn{
+  transform: scale(1.005);
+  transition: transform .2s linear;
+}
+.forgot_pass{
+  margin-top: .5rem;
+  cursor: pointer;
+}
+.forgot_pass a{
+  color: rgb(103, 103, 103);
+  text-decoration: underline rgb(103, 103, 103);
+}
+h2{
+  font-family: Poppins;
+  margin-bottom: 1rem;
+}
+.show, .show2{
+  width: 10%;
+  padding: 0;
+  height: 1.9rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+#footer_login{
+  text-align: center;
+}
+#footer_login p{
+  max-width: 90%;
+  word-wrap: break-word;
+  margin: 0 auto 1rem auto;
+  font-family: "Bubbler One";
+}
+#footer_login p a{
+  text-decoration: underline;
+  color: #525f6c;
+}
+#logout_btn{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 2rem;
+  background-color: #003F5D;
+  color: white;
+  border-radius: .2rem;
+  border: none;
+  cursor: pointer;
+}
+#logout_btn:hover{
+  transform: scale(1.01);
+  transition: all .1s linear;
+}
+.bottom_bar{
+  width: 50%;
+  margin: 2rem auto 1rem auto;
+}
+#message{
+  display: none;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+}
+#login_message{
+  display: none;
+  text-align: center;
+  margin-top: 2rem;
+  text-transform: none;
+  padding: 0 1rem 0 1rem;
+}
+#login_message a{
+  text-decoration: underline;
+  color: rgb(54, 64, 79);
+}
+
+@media only screen and (max-width: 620px){
+  #signup_section{
+    width: 80%;
+  }
+  #signup_pass, #pass_confirmation{
+    width: 85%;
+  }
+  .show2{
+    width: 15%;
+  }
+}
+@media only screen and (max-width: 600px){
+  #login_section{
+    width: 80%;
+  }
+  input{
+    font-size: .8rem;
+  }
+  #login_pass{
+    width: 85%;
+  }
+  .show{
+    width: 15%;
+  }
+  .bottom_bar{
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 370px){
+  #login_section, #signup_section{
+    width: 100%;
+    border: none;
+  }
+  .sign-logotop{
+    font-size: 1.6rem;
+  }
+  .bottom_bar{
+    width: 90%;
+    margin-top: 0;
+  }
+  #footer_login{
+    font-size: .8rem;
+  }
+  #logout_btn{
+    margin-bottom: 1.5rem;
+  }
+}
