@@ -167,7 +167,7 @@
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", function () {
                 navigator.serviceWorker
-                    .register("https://iluminnatti.github.io/Game-Room-Webapp/serviceWorker.js")
+                    .register("/Game-Room-Webapp/serviceWorker.js")
                     .then((registration) => {
                         console.log("SW registration successful");
                     });
