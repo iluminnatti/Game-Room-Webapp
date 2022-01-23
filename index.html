@@ -163,25 +163,17 @@
     <script type="text/javascript" src="JS/menu.js"></script>
     <script type="text/javascript" src="JS/main.js"></script>
 
-    <!-- <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
-      import { auth } from 'https://www.gstatic.com/firebasejs/9.6.3/firebase-auth.js';
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyBHdNR7I1ikWJALD99PpFjjGwRinZ96OLU",
-        authDomain: "game-room-dca9f.firebaseapp.com",
-        projectId: "game-room-dca9f",
-        storageBucket: "game-room-dca9f.appspot.com",
-        messagingSenderId: "25450111935",
-        appId: "1:25450111935:web:5350ab9a04d21ca0dbf70a"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-    </script> -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/serviceWorker.js")
+                    .then((registration) => {
+                        console.log("SW registration successful");
+                    });
+            });
+        }
+    </script>
 
   </body>
 </html>
